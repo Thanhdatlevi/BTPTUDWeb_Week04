@@ -5,15 +5,15 @@ document.getElementById('calculate').addEventListener('click', function(e) {
   const operation = document.querySelector('input[name="operation"]:checked');
   const resultElement = document.getElementById('result');
   const notificationElement = document.getElementById('notification');
-  // Reset previous results and notifications
+
   resultElement.textContent = '';
   notificationElement.textContent = '';
-  if (isNaN(firstNumber)) {
+  if (isNaN(firstNumber)||!firstNumber) {
     notificationElement.textContent = 'Please enter valid first numbers!';
     resultElement.value = '';
     return;
   }
-  if (isNaN(secondNumber)) {
+  if (isNaN(secondNumber)||!secondNumber) {
     notificationElement.textContent = 'Please enter valid second numbers!';
     resultElement.value = '';
     return;
